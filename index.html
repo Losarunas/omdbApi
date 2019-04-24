@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="main-search">
+                <div class="input-group input-group mb-3">
+                    <div class="input-group-prepend">
+                    </div>
+                    <input type="text" class="form-control search-input" placeholder="Search" value="ba">
+                </div>
+                <fieldset class="form-group ">
+                    <div class="row">
+                        <div class="col-sm-10 form-check-inline radio-buttons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="search-type" id="gridRadios1" value="" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    All
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="search-type" id="gridRadios2" value="movie">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Movies
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="search-type" id="gridRadios3" value="series">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Series
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row movies">
+
+        </div>
+
+        <div class="row movie-overview">
+<!--
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTcyMzY0NTMzMF5BMl5BanBnXkFtZTcwMTc1MjY4Mg@@._V1_SX300.jpg" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1 class="mb-4">Bad Lieutenant: Port of Call New Orleans (2009)</h1>
+                        <div class="movie-overview-details">
+                           <p class="movie-overview-genre">Crime, Drama</p>
+                           <p>Runtime: <span class="movie-overview-runtime">122 min</span></p>
+                           
+                            <p class="movie-overview-plot">Terence McDonagh is a drug- and gambling-addled detective in post-Katrina New Orleans investigating the killing of five Senegalese immigrants.</p>
+                            <p>Director: <span class="movie-overview-director">Werner Herzog</span></p>
+                            <p>Writer: <span class="movie-overview-writer">William M. Finkelstein (screenplay)</span></p>
+                            <p>Actors: <span class="movie-overview-actors">Nicolas Cage, Eva Mendes, Val Kilmer, Xzibit</span></p>
+                            <p>Country: <span class="movie-overview-country">USA</span></p>
+                            <p>Awards: <span class="movie-overview-awards">3 wins and 9 nominations.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+        </div>
+
+   
+   <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="${data.Poster}" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <h1>${data.Title} (${data.Year})</h1>
+                        <p class="movie-overview-plot mb-4">${data.Plot}</p>
+                        <div class="movie-overview-details">
+                            
+                            <div class="movie-overview-details--short>
+                                <p>ASD</p>
+                                <p>as</p>
+                                <p class="movie-overview-genre">${data.Genre}</p>
+                                <p class="movie-overview-language">Language: ${data.Language}</p>
+                                <p>Runtime: <span class="movie-overview-runtime">${data.Runtime}</span></p>
+                                <p><span class="movie-overview-realease-date">Released: ${data.Released}</span></p>
+
+                            </div>
+                           
+                           
+                            <p>Director: <span class="movie-overview-director">${data.Director}</span></p>
+                            <p>Writer: <span class="movie-overview-writer">${data.Writer}</span></p>
+                            <p>Actors: <span class="movie-overview-actors">${data.Actors}</span></p>
+                            <p>Awards: <span class="movie-overview-awards">${data.Awards}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+    </div>
+
+
+    <script src="js/localstorage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/movie.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
