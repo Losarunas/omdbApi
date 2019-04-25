@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>OmdbAPI</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -51,19 +53,40 @@
 
         </div>
 
-        <div class="row movie-overview">
+        <div class="row movie-overview mb-5">
+
 <!--
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-4">
                         <img src="https://m.media-amazon.com/images/M/MV5BMTcyMzY0NTMzMF5BMl5BanBnXkFtZTcwMTc1MjY4Mg@@._V1_SX300.jpg" alt="">
+                        <div class="col-lg-12">
+                            <hr>
+                            <div class="movie-overview--ratings">
+                                <div class="movie-rating">
+                                    <a href="https://www.imdb.com/title/tt0120338/"><img src="img/imdb.png" alt="" class="movie-img-rating"></a>
+                                    <div class="movie-rating-imdb-ratings">
+                                        <p>7.3</p>
+                                        <p class="imdb-ratings-votes">289,502</p>
+                                    </div>
+                                </div>
+                                <div class="movie-rating">
+                                    <a href="https://www.rottentomatoes.com/search/?search=titanic"><img src="img/rotten.png" alt="" class="movie-img-rating"></a>
+                                    <p>88%</p>
+                                </div>
+                                <div class="movie-rating">
+                                    <a href="https://www.metacritic.com/search/all/titanic/results"><img src="img/metacritic.png" alt="" class="movie-img-rating"></a>
+                                    <p>80%</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-8">
                         <h1 class="mb-4">Bad Lieutenant: Port of Call New Orleans (2009)</h1>
                         <div class="movie-overview-details">
-                           <p class="movie-overview-genre">Crime, Drama</p>
-                           <p>Runtime: <span class="movie-overview-runtime">122 min</span></p>
-                           
+                            <p class="movie-overview-genre">Crime, Drama</p>
+                            <p>Runtime: <span class="movie-overview-runtime">122 min</span></p>
+
                             <p class="movie-overview-plot">Terence McDonagh is a drug- and gambling-addled detective in post-Katrina New Orleans investigating the killing of five Senegalese immigrants.</p>
                             <p>Director: <span class="movie-overview-director">Werner Herzog</span></p>
                             <p>Writer: <span class="movie-overview-writer">William M. Finkelstein (screenplay)</span></p>
@@ -75,46 +98,19 @@
                 </div>
             </div>
 -->
+
         </div>
-
-   
-   <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="${data.Poster}" alt="">
-                    </div>
-                    <div class="col-lg-8">
-                        <h1>${data.Title} (${data.Year})</h1>
-                        <p class="movie-overview-plot mb-4">${data.Plot}</p>
-                        <div class="movie-overview-details">
-                            
-                            <div class="movie-overview-details--short>
-                                <p>ASD</p>
-                                <p>as</p>
-                                <p class="movie-overview-genre">${data.Genre}</p>
-                                <p class="movie-overview-language">Language: ${data.Language}</p>
-                                <p>Runtime: <span class="movie-overview-runtime">${data.Runtime}</span></p>
-                                <p><span class="movie-overview-realease-date">Released: ${data.Released}</span></p>
-
-                            </div>
-                           
-                           
-                            <p>Director: <span class="movie-overview-director">${data.Director}</span></p>
-                            <p>Writer: <span class="movie-overview-writer">${data.Writer}</span></p>
-                            <p>Actors: <span class="movie-overview-actors">${data.Actors}</span></p>
-                            <p>Awards: <span class="movie-overview-awards">${data.Awards}</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-   
     </div>
 
 
-    <script src="js/localstorage.js"></script>
-    <script src="js/ui.js"></script>
+
+
+    <script src=" js/localstorage.js"> </script>
+    <script src="js/ui.js">
+    </script>
     <script src="js/search.js"></script>
     <script src="js/movie.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>

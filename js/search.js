@@ -1,4 +1,4 @@
-//http://www.omdbapi.com/?s=badass&apikey=6687c5a4&page=1&type=
+// http://www.omdbapi.com/?s=badass&apikey=6687c5a4&page=1&type=
 class Search{
     constructor(title, type){
         this.title = title;

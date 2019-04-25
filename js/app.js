@@ -6,7 +6,15 @@ const radios = document.getElementsByName("search-type");
 
 document.querySelector(".search-input").addEventListener("keyup", moviesSearch);
 
-document.querySelector(".radio-buttons").addEventListener("click", checkButton)
+document.querySelector(".radio-buttons").addEventListener("click", checkButton);
+
+document.querySelector(".movie-overview").addEventListener("click", e => {
+    backButton(e);
+});
+
+function backButton(e){
+    if(e.target.classList.contains("movie-overview-back")) moviesSearch();
+}
 
 function checkButton(){
 if(radios[0].checked) searchRadioBtn = '';
