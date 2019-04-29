@@ -1,16 +1,16 @@
-// http://www.omdbapi.com/?s=badass&apikey=6687c5a4&page=1&type=
 class Search{
-    constructor(title, type){
+    constructor(title, type, page){
         this.title = title;
         this.type = type;
+        this.page = page;
         this.appID = '6687c5a4';
     }
     
-    async getData(){
-        const data = await fetch(`http://www.omdbapi.com/?s=${this.title}&apikey=${this.appID}&type=${this.type}`);
+    async getData(page){
+        const data = await fetch(`http://www.omdbapi.com/?s=${this.title}&apikey=${this.appID}&type=${this.type}&page=${this.page}`);
         const resData = await data.json();
         return resData;
-    } 
+    }
 }
 
 class Movie extends Search{

@@ -3,9 +3,12 @@ class UI{
        this.movies = document.querySelector(".movies");
        this.movieOverview = document.querySelector(".movie-overview");
     }
-    paintMovies(data){
-        
+    newSearchMovies(data){
         this.movies.innerHTML = '';
+        paintMovies(data);
+    }
+    
+    paintMovies(data){
         this.movieOverview.innerHTML = '';
         
         data = data.Search;
@@ -27,7 +30,7 @@ class UI{
                     </div>
                 </div>`
         });
-        this.movies.innerHTML = output;
+        this.movies.insertAdjacentHTML("beforeend", output);
     }
     
     paintMovieOverview(data){
@@ -81,6 +84,10 @@ class UI{
                 </div>
             </div>`
         this.movieOverview.innerHTML = output;
+    }
+    
+    cleanSearchField(){
+        this.movies.innerHTML = '';
     }
 }
 function checkPoster(data){
